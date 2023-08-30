@@ -13,6 +13,7 @@ class QuestionsController < ApplicationController
     end
 
     def create
+        p params
     end
 
     def update
