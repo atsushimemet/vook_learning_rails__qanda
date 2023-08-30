@@ -13,7 +13,9 @@ class QuestionsController < ApplicationController
     end
 
     def create
-        p question_params
+    @question = Question.new(question_params)
+    @question.save
+    redirect_to @question
     end
 
     def update
