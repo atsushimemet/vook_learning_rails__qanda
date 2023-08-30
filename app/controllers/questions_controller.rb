@@ -13,12 +13,18 @@ class QuestionsController < ApplicationController
     end
 
     def create
-        p params
+        p question_params
     end
 
     def update
     end
 
     def destroy
+    end
+
+    private
+
+    def question_params
+        params.require(:question).permit(:title, :name, :content)
     end
 end
