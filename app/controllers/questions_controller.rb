@@ -4,9 +4,7 @@ class QuestionsController < ApplicationController
     end
 
     def show
-        p params[:id]
         @question = Question.find(params[:id])
-        # p @question
     end
     
     def new
